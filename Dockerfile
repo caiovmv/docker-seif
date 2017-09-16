@@ -1,6 +1,7 @@
 FROM build.guidoo.com.br:5000/seif-base
 
-RUN  rm -rf /var/www/html/*
+RUN mkdir -p /etc/letsencrypt
+RUN rm -rf /var/www/html/*
 COPY frontend.zip /var/www/html/ && rm -rf frontend.zip
 WORKDIR /var/www/html
 RUN unzip frontend.zip /var/www/html
