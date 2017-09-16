@@ -5,7 +5,7 @@ RUN rm -rf /var/www/html/*
 COPY frontend.zip /var/www/html/
 RUN rm -rf frontend.zip
 WORKDIR /var/www/html
-RUN unzip frontend.zip /var/www/html
+RUN unzip frontend.zip
 RUN ls -ltr
 
 WORKDIR /opt/seif
