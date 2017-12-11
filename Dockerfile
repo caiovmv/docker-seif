@@ -22,5 +22,5 @@ VOLUME /etc/letsencrypt
 VOLUME /var/lib/mysql
 VOLUME /opt/seif
 
-EXPOSE 80 443
+EXPOSE 80 443 8080
 CMD ["/opt/seif/start.sh"]
