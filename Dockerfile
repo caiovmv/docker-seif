@@ -21,8 +21,9 @@ COPY frontend.zip /var/www/html/
 RUN rm -rf frontend.zip
 WORKDIR /var/www/html
 RUN unzip frontend.zip
-RUN mv /var/www/html/dist/* /var/www/html/
-RUN rm -rf /var/www/html/dist.
+RUN cd /var/www/html/dist 
+RUN mv * ../
+RUN rm -rf dist/
 RUN ls -ltr
 
 RUN mkdir /opt/seif
